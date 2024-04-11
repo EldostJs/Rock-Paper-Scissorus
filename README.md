@@ -1,1 +1,2 @@
 # Rock-Paper-Scissorus
+slam

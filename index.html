@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Rock-Paper-Scissors</title>
+</head>
+<body>
+
+    <main class="mother-div">
+        <div class="first-screen">
+          <h1 class="ready">Are you ready?</h1>
+          <div class="buttons">
+            <button class="start" role="button">Start</button>
+            <button class="cancel">Cancel</button>
+          </div>
+        </div>
+  
+        <div class="game">
+          <div class="score">
+            <div class="me-score">
+              <h1 id="meScore">0</h1>
+              <h3>YOU</h3>
+            </div>
+            <div class="result-div">
+              <h4>WIN: <span id="winResult">0</span></h4>
+              <h4>LOSE: <span id="loseResult">0</span></h4>
+            </div>
+            <div class="ai-score">
+              <h1 id="aiScore">0</h1>
+              <h3>AI</h3>
+            </div>
+          </div>
+  
+          <div class="images">
+            <img class="meHand" src="./image/r.png"/>
+            <div class="result">
+              <p class="meWin">YOU WIN!</p>
+              <p class="meLose">YOU LOSE!</p>
+            </div>
+            <img class="aiHand" src="./image/r.png" alt="#" />
+          </div>
+  
+          <div class="game-button">
+            <button class="rockBtn"><img src="./image/r.png" class="btnimg"></button>
+            <button class="paperBtn"><img src="./image/p.png" class="btnimg"></button>
+            <button class="scissorsBtn"><img src="./image/s.png" class="btnimg"></button>
+          </div>
+        </div>
+      </main>
+    <script src="./js/index.js"></script>
+</body>
+</html>

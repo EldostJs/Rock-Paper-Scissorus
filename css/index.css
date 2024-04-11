@@ -1,0 +1,381 @@
+@keyframes gradient-text {
+    0% { color: red; }
+    25% { color: orange; }
+    50% { color: yellow; }
+    75% { color: green; }
+    100% { color: blue; }
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(-5deg); }
+  20% { transform: rotate(5deg); }
+  30% { transform: rotate(-5deg); }
+  40% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  60% { transform: rotate(5deg); }
+  70% { transform: rotate(-5deg); }
+  80% { transform: rotate(5deg); }
+  90% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }}
+
+.images{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 55vh;
+  }
+
+.images img {
+    width: 28%;
+}
+.game{
+    display: none;
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9999;
+    text-align: center;
+    padding-top: 250px;
+
+}
+.btnimg{
+  width: 30px;
+  height: 30px;
+}
+.meWin{
+  display: none;
+  font-size: xx-large;
+  animation: gradient-text 5s infinite;
+
+}
+.meLose{
+  display: none;
+  font-size: xx-large;
+  animation: gradient-text 5s infinite;
+
+}
+.first-screen{
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9999;
+    text-align: center;
+    padding-top: 250px;
+}
+
+.ready{
+    animation: gradient-text 5s infinite;
+    font-size: 80px;
+}
+.aiHand {
+  transform: scaleX(-1);
+}
+.score{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    color: #fff;
+    margin-top: -200px;
+}
+.images{
+  animation: shake 3.5s infinite;
+}
+
+
+
+
+
+
+
+
+
+/* Buttons Css */
+
+.start,
+.start:after {
+  width: 150px;
+  height: 76px;
+  line-height: 78px;
+  font-size: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #00E6F6;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.start:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'ALTERNATE TEXT';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+.start:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .start,
+  .start:after {
+    width: 200px;
+    height: 86px;
+    line-height: 88px;
+  }
+}
+
+.cancel,
+.cancel:after {
+  width: 150px;
+  height: 76px;
+  line-height: 78px;
+  font-size: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #00E6F6;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.cancel:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'ALTERNATE TEXT';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+.cancel:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .cancel,
+  .cancel:after {
+    width: 200px;
+    height: 86px;
+    line-height: 88px;
+    margin-left: 50px;
+  }
+}
+
+.rockBtn {
+    --hover-shadows: 16px 16px 33px #121212, -16px -16px 33px #303030;
+    --accent: fuchsia;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    border: none;
+    border-radius: 1.1em;
+    background-color: #212121;
+    cursor: pointer;
+    color: white;
+    padding: 1em 2em;
+    transition: box-shadow ease-in-out 0.3s, background-color ease-in-out 0.1s,
+      letter-spacing ease-in-out 0.1s, transform ease-in-out 0.1s;
+    box-shadow: 13px 13px 10px #1c1c1c, -13px -13px 10px #262626;
+  }
+  
+  .rockBtn:hover {
+    box-shadow: var(--hover-shadows);
+  }
+  
+  .rockBtn:active {
+    box-shadow: var(--hover-shadows), var(--accent) 0px 0px 30px 5px;
+    background-color: var(--accent);
+    transform: scale(0.95);
+  }
+  
+  .paperBtn {
+    margin-left: 50px;
+    --hover-shadows: 16px 16px 33px #121212, -16px -16px 33px #303030;
+    --accent: fuchsia;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    border: none;
+    border-radius: 1.1em;
+    background-color: #212121;
+    cursor: pointer;
+    color: white;
+    padding: 1em 2em;
+    transition: box-shadow ease-in-out 0.3s, background-color ease-in-out 0.1s,
+      letter-spacing ease-in-out 0.1s, transform ease-in-out 0.1s;
+    box-shadow: 13px 13px 10px #1c1c1c, -13px -13px 10px #262626;
+  }
+  
+  .paperBtn:hover {
+    box-shadow: var(--hover-shadows);
+  }
+  
+  .paperBtn:active {
+    box-shadow: var(--hover-shadows), var(--accent) 0px 0px 30px 5px;
+    background-color: var(--accent);
+    transform: scale(0.95);
+  }
+
+  .scissorsBtn {
+    margin-left: 50px;
+    --hover-shadows: 16px 16px 33px #121212, -16px -16px 33px #303030;
+    --accent: fuchsia;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    border: none;
+    border-radius: 1.1em;
+    background-color: #212121;
+    cursor: pointer;
+    color: white;
+    padding: 1em 2em;
+    transition: box-shadow ease-in-out 0.3s, background-color ease-in-out 0.1s,
+      letter-spacing ease-in-out 0.1s, transform ease-in-out 0.1s;
+    box-shadow: 13px 13px 10px #1c1c1c, -13px -13px 10px #262626;
+  }
+  
+  .scissorsBtn:hover {
+    box-shadow: var(--hover-shadows);
+  }
+  
+  .scissorsBtn:active {
+    box-shadow: var(--hover-shadows), var(--accent) 0px 0px 30px 5px;
+    background-color: var(--accent);
+    transform: scale(0.95);
+  }
